@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
+import WeekdayTimeChart from "./WeekdayTimeChart";
 
 const App = () => {
     const socketRef = useRef(null);
@@ -56,6 +57,10 @@ const App = () => {
 
             <button onClick={sendMessage}>Send WebSocket Message</button>
             <p>Message from Server: {wsMessage}</p>
+            <div style={{ marginTop: "20px" }}>
+                <h2>Weekly Time Scatter Chart</h2>
+                <WeekdayTimeChart />
+            </div>
         </div>
     );
 };
