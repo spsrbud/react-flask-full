@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 import WeekdayTimeChart from "./WeekdayTimeChart";
+import PieChartExample from "./PieChartExample";
 
 const App = () => {
     const socketRef = useRef(null);
@@ -61,6 +62,10 @@ const App = () => {
                 <h2>Weekly Time Scatter Chart</h2>
                 <WeekdayTimeChart />
             </div>
+            <div style={{ marginTop: "20px" }}>
+                <h2>Pie Chart Example</h2>
+                <PieChartExample />
+                </div>
         </div>
     );
 };
